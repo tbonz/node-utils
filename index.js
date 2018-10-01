@@ -2,7 +2,7 @@ const fs = require('fs');
 const PromiseFtp = require('promise-ftp');
 const archiver = require('archiver');
 
-exports.upload = async (dir, filename) => {
+const upload = async (dir, filename) => {
 
   var ftp = new PromiseFtp();
   ftp.connect({host: process.env.FTP_HOST, user: process.env.FTP_USER, password: process.env.FTP_PWD})
@@ -14,7 +14,7 @@ exports.upload = async (dir, filename) => {
 
 }
 
-exports.compressDir = async (sourceDir, outputDir, outputFilename) => {
+const compressDir = async (sourceDir, outputDir, outputFilename) => {
   return new Promise((resolve,reject) => {
     
     // create a file to stream archive data to.
@@ -45,3 +45,6 @@ exports.compressDir = async (sourceDir, outputDir, outputFilename) => {
 
   });
 }
+
+module.exports.upload = upload;
+module.exports.compressDir = compressDir;
