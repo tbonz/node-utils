@@ -19,6 +19,11 @@
   "homepage": "https://github.com/tbonz/node-utils#readme",
   "dependencies": {
     "archiver": "^3.0.0",
-    "promise-ftp": "^1.3.5"
+    "ftp": "^0.3.10"
+  },
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
   }
 }
