@@ -1,6 +1,6 @@
 {
   "name": "@tbonz/node-utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Node utilities to help simplify your workflow.",
   "main": "lib",
   "scripts": {
